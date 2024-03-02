@@ -8,33 +8,28 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserMapperImpl {
   public UserResponseDto toDto(User user) {
-    if ( user == null ) {
+    if (user == null) {
       return null;
     }
-
     UserResponseDto userResponseDto = new UserResponseDto();
-
-    if ( user.getId() != null ) {
-      userResponseDto.setId( user.getId() );
+    if (user.getId() != null) {
+      userResponseDto.setId(user.getId());
     }
-    if ( user.getEmail() != null ) {
-      userResponseDto.setEmail( user.getEmail() );
+    if (user.getEmail() != null) {
+      userResponseDto.setEmail(user.getEmail());
     }
-
     return userResponseDto;
   }
 
   public User toModel(RegisterUserRequestDto requestDto) {
-    if ( requestDto == null ) {
+    if (requestDto == null) {
       return null;
     }
-
     User user = new User();
-
-    if ( requestDto.getEmail() != null ) {
-      user.setEmail( requestDto.getEmail() );
+    if (requestDto.getEmail() != null) {
+      user.setEmail(requestDto.getEmail());
     }
-    if ( requestDto.getPassword() != null ) {
+    if (requestDto.getPassword() != null) {
       user.setPassword( requestDto.getPassword() );
     }
     return user;

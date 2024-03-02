@@ -244,7 +244,7 @@
         },
         "unitsOrdered": 557,
         "unitsOrderedB2B": 10,
-        "totalOrderItems": 543,
+        "totalOrderItems": 1000,
         "totalOrderItemsB2B": 10,
         "averageSalesPerOrderItem": {
           "amount": 22.0,
@@ -315,7 +315,7 @@
           "amount": 110.15,
           "currencyCode": "USD"
         },
-        "unitsOrdered": 688,
+        "unitsOrdered": 3000,
         "unitsOrderedB2B": 5,
         "totalOrderItems": 644,
         "totalOrderItemsB2B": 5,

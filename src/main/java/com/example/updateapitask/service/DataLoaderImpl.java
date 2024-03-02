@@ -20,6 +20,9 @@ public class DataLoaderImpl {
   @Value("${db.document.id}")
   private String documentId;
 
+  @Value("${loader.file.path}")
+  private String filePath;
+
   @Autowired
   public DataLoaderImpl(ReportRepository reportRepository) {
     this.reportRepository = reportRepository;
@@ -29,7 +32,6 @@ public class DataLoaderImpl {
   public void loadData() {
     ObjectMapper objectMapper = new ObjectMapper();
     try {
-      String filePath = "C:\\Users\\alexf\\IdeaProjects\\update-api-task\\test_report.json";
       Report report = objectMapper.readValue(new File(filePath), Report.class);
       report.setId(documentId);
       reportRepository.save(report);
