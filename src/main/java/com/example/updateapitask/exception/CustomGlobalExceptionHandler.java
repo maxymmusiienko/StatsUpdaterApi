@@ -58,4 +58,17 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
     body.put("message", ex.getMessage());
     return new ResponseEntity<>(body, new HttpHeaders(), HttpStatus.BAD_REQUEST);
   }
+
+  @ExceptionHandler(StatsException.class)
+  @ResponseStatus(HttpStatus.BAD_REQUEST)
+  protected ResponseEntity<Object> handleStatsException(
+      StatsException ex
+  ) {
+    Map<String, Object> body = new LinkedHashMap<>();
+    body.put("timestamp", LocalDateTime.now());
+    body.put("status", HttpStatus.BAD_REQUEST);
+    body.put("error", "Stats load failed");
+    body.put("message", ex.getMessage());
+    return new ResponseEntity<>(body, new HttpHeaders(), HttpStatus.BAD_REQUEST);
+  }
 }
