@@ -18,6 +18,8 @@ public class TrafficByAsin {
   private int mobileAppPageViewsB2B;
   private double mobileAppPageViewsPercentage;
   private int mobileAppPageViewsPercentageB2B;
+  private double mobileAppSessionPercentage;
+  private int mobileAppSessionPercentageB2B;
   private int mobileAppSessions;
   private int mobileAppSessionsB2B;
   private int pageViews;
